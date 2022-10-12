@@ -1,3 +1,6 @@
+from typing import Set
+
+
 def mainLoop():
 	mode = "non"
 	while mode not in (1, 2, "quit"):
@@ -22,12 +25,18 @@ def quiting():
 	print("Currently stopping the program")
 
 
+def inputInAList(listeInputs, texte):
+	inpt = None
+	while inpt not in listeInputs or inpt != "quit":
+		inpt = input(texte)
+	return inpt
+
 def flashCard():
 
 	def getCards():
 
 		CARALIST = ["Question", "Réponse", "DateCreation",
-					"DerniereRevision", "Par coeur"]
+					"DerniereRevision", "Par coeur", "Set"]
 
 		allCards = []
 		with open("cards.cd", 'r') as cards:
@@ -46,7 +55,20 @@ def flashCard():
 		return allCards
 
 	def studying():
-		print(getCards())
+		def studySetSpecifique():
+			pass
+		
+		def studyEverything():
+			pass
+
+		setSpecifique = inputInAList(["y", "n"], "Do you want to study a specific set ? \n\n")
+
+		if (setSpecifique == "y"):
+			studySetSpecifique()
+		if (setSpecifique == "n"):
+			studyEverything()
+		if (setSpecifique != "quit"):
+			studying()
 
 	def creation():
 		pass

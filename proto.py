@@ -1,24 +1,21 @@
-from typing import Set
+# def mainLoop():
+	# mode = "non"
+	# while mode not in (1, 2, "quit"):
+	# 	mode = input("Which mode use ? \n1 - Flash card \n2 - Agenda\n\n")
+	# 	try:
+	# 		mode = int(mode)
+	# 	except:
+	# 		continue
 
+	# if (mode == 1):
+	# 	flashCard()
+	# elif (mode == 2):
+	# 	agenda()
 
-def mainLoop():
-	mode = "non"
-	while mode not in (1, 2, "quit"):
-		mode = input("Which mode use ? \n1 - Flash card \n2 - Agenda\n\n")
-		try:
-			mode = int(mode)
-		except:
-			continue
-
-	if (mode == 1):
-		flashCard()
-	elif (mode == 2):
-		agenda()
-
-	if (mode != "quit"):
-		mainLoop()
-	else:
-		quiting()
+	# if (mode != "quit"):
+	# 	mainLoop()
+	# else:
+	# 	quiting()
 
 
 def quiting():

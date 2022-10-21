@@ -39,3 +39,8 @@ def mainLoop():
         mainLoop()
     else:
         quiting()
+
+try:
+    mainLoop()
+except KeyboardInterrupt:
+    quiting()

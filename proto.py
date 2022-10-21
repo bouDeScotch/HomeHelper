@@ -18,38 +18,38 @@
 	# 	quiting()
 
 
-def quiting():
-	print("Currently stopping the program")
+# def quiting():
+# 	print("Currently stopping the program")
 
 
-def inputInAList(listeInputs, texte):
-	inpt = None
-	while inpt not in listeInputs or inpt != "quit":
-		inpt = input(texte)
-	return inpt
+# def inputInAList(listeInputs, texte):
+# 	inpt = None
+# 	while inpt not in listeInputs or inpt != "quit":
+# 		inpt = input(texte)
+# 	return inpt
 
 def flashCard():
 
-	def getCards():
+	# def getCards():
 
-		CARALIST = ["Question", "Réponse", "DateCreation",
-					"DerniereRevision", "Par coeur", "Set"]
+	# 	CARALIST = ["Question", "Réponse", "DateCreation",
+	# 				"DerniereRevision", "Par coeur", "Set"]
 
-		allCards = []
-		with open("cards.cd", 'r') as cards:
-			cardsLines = cards.readlines()
-		# Clean the \n
-		for i, line in enumerate(cardsLines):
-			cardsLines[i] = "".join(line.split("\n"))
+	# 	allCards = []
+	# 	with open("cards.cd", 'r') as cards:
+	# 		cardsLines = cards.readlines()
+	# 	# Clean the \n
+	# 	for i, line in enumerate(cardsLines):
+	# 		cardsLines[i] = "".join(line.split("\n"))
 
-		for card in cardsLines:
-			cara = card.split(";")
-			card = {}
-			for idx, carac in enumerate(CARALIST):
-				card[carac] = cara[idx]
-			allCards.append(card)
+	# 	for card in cardsLines:
+	# 		cara = card.split(";")
+	# 		card = {}
+	# 		for idx, carac in enumerate(CARALIST):
+	# 			card[carac] = cara[idx]
+	# 		allCards.append(card)
 
-		return allCards
+	# 	return allCards
 
 	def studying():
 		def studySetSpecifique():
@@ -67,25 +67,25 @@ def flashCard():
 		if (setSpecifique != "quit"):
 			studying()
 
-	def creation():
+	# def creation():
 		pass
 
-	action = "non"
-	while action not in (1, 2, "quit"):
-		action = input(
-			"Do you want to : \n1 - Create new flash cards \n2 - Study the existing flash cards \n\n")
-		try:
-			action = int(action)
-		except:
-			continue
+	# action = "non"
+	# while action not in (1, 2, "quit"):
+	# 	action = input(
+	# 		"Do you want to : \n1 - Create new flash cards \n2 - Study the existing flash cards \n\n")
+	# 	try:
+	# 		action = int(action)
+	# 	except:
+	# 		continue
 
-	if (action == 1):
-		creation()
-	elif (action == 2):
-		studying()
+	# if (action == 1):
+	# 	creation()
+	# elif (action == 2):
+	# 	studying()
 
-	if (action != "quit"):
-		flashCard()
+	# if (action != "quit"):
+	# 	flashCard()
 
 
 def agenda():
